@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/tulostus.css" media="print">
+	<script src="js/jquery.js"></script>
+	<script src="js/script.js"></script>
+	
+	<title>JWT harkkatyö, Eetu Suonpää - yhteystiedot</title>
+</head>
+<body>
+	<div id="logo">
+		<h1 class="red_text">JWT harkkatyö</h1>
+		<h2>Eetu Suonpää</h2>
+	</div>
+	
+	<div id="navbar" class="cf">
+		<ul class="cf">
+			<li id="index">Etusivu</li>
+			<li id="opetus">Opetus</li>
+			<li id="yhteystiedot" class="active">Yhteystiedot</li>
+		</ul>
+	</div>
+	
+	<div id="main_content">
+		<div id="ota_yhteytta" class="opetuspalkki">
+			<h3>Ota yhteyttä</h3>
+			
+			<p>Alla olevalla lomakkeella voit antaa palautetta oppaasta, ilmoittaa havaitusta viasta tai muuten vain ottaa yhteyttä. </p>
+			<p>HUOM! Täytä kaikki kentät!</p>
+			
+			<form id="yhteydenotto_form" name="contact_form" action="http://people.uta.fi/~ah/peilaa.php" method="POST">
+				<label for="name">Nimi</label><label id="name-error" class="error">Tarkista nimi!</label>
+				<input type="text" id="name" name="name" placeholder="Kirjoita nimesi"/>
+				<label for="email">Sähköposti</label><label id="email-error" class="error">Tarkista sähköposti!</label>
+				<input type="text" id="email" name="email" placeholder="Kirjoita sähköpostiosoitteesi" />
+				<label for="topic">Aihe</label><label id="topic-error" class="error">Anna aihe!</label>
+				<input type="text" id="topic" name="topic"  placeholder="Viestin aihe"/>
+				<label for="message">Viesti</label><label id="message-error" class="error">Anna jotain palautetta!</label>
+				<textarea id="message" name="message">
+				</textarea>
+				
+				<button type="submit" id="submit_form">Lähetä</button>
+			</form>
+			
+		</div>
+	</div>
+	</div>
+	<footer>
+		<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fpeople.uta.fi%2F~es96426%2FJWT_harkkatyo%2Findex.html"><img src="img/I_heart_validator.png" alt="validaattori"></a>
+		<p>Copyright Eetu Suonpää, Suonpaa.Eetu.J@student.uta.fi</p>
+	</footer>
+</body>
+</html>

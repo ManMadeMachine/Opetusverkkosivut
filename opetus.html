@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/tulostus.css" media="print">
+	<script src="js/jquery.js"></script>
+	<script src="js/script.js"></script>
+	
+	<title>JWT harkkatyö, Eetu Suonpää - opetus</title>
+</head>
+<body>
+	<div id="logo">
+		<h1 class="red_text">JWT harkkatyö</h1>
+		<h2>Eetu Suonpää</h2>
+	</div>
+	
+	<div id="navbar" class="cf">
+		<ul class="cf">
+			<li id="index">Etusivu</li>
+			<li id="opetus" class="active">Opetus</li>
+			<li id="yhteystiedot">Yhteystiedot</li>
+		</ul>
+	</div>
+	
+	<div id="main_content">
+		<div class="opetuspalkki">
+			<h3>Tekstin värien muokkaaminen</h3>
+			<p>Tekstin väriä voi vaihtaa color-attribuutin avulla.</p>
+			<p>Mikäli sivun tyylittelyssä käytetään CSS:ää, voidaan <i>color</i>-attribuutille antaa arvoja kolmella eri tavalla:</p>
+			
+			<ul>
+				<li>Heksadesimaaliarvolla (HEX-arvolla) - #FFF000</li>
+				<li>Värin nimellä - yellow</li>
+				<li>RGB-arvolla - rgb(23, 255, 4)</li>
+			</ul>
+			
+			<p>
+				Värin määrittelytyylin valinta riippuu täysin tilanteesta. Mikäli halutaan äkkiä jotain päävärejä sivulle, on järkevintä käyttää värin nimeä attribuutissa, mutta mikäli halutaan tarkempaa kontrollia väreissä, HEX-arvot ovat paras ratkaisu. Jos taas halutaan määritellä värejä dynaamisesti, esim. Javascriptin avulla, on helpointa käyttää RGB-arvoja. RGB-arvot muodostuvat kolmesta pääväristä: punaisesta (Red), vihreästä (Green) ja sinisestä (Blue). Jokainen väri saa arvon väliltä 0 ... 255 ja tämä arvo kertoo, miten paljon kyseistä väriä halutaan.
+			</p>
+			
+			<h2 class="red_text">Esimerkki:</h2>
+			<div class="esimerkki">
+				<p>body { color: red; }</p>
+				<p>h2 { color: #FF33CC; }</p>
+				<p>#linkit { color: rgb(23, 128, 255); }</p>
+			</div>
+		</div>
+		
+		<div class="opetuspalkki">
+			<h3>Tekstin sisennys</h3>
+			<p>Tekstin aloitusta voidaan sisentää CSS:n avulla käyttämällä <i>text-indent</i> -attribuuttia.</p>
+			<p>Attribuutille voi antaa numeerisen arvon jollain seuraavista tavoista: px, em, %, cm, pt.</p>
+			
+			<h2 class="red_text">Esimerkki:</h2>
+			<div class="esimerkki">
+				<p>h1 { text-indent: 20px; }</p>
+				<p>p { text-indent: 3em; }</p>
+				<p>.sisennetty { text-indent: 10%; }</p>
+			</div>
+		</div>
+		
+		<div class="opetuspalkki">
+			<h3>Tekstin koristelu</h3>
+			<p>Tekstin koristelulla tarkoitan tässä tapauksessa tekstin mahdollisia alle-, yli-, tai päälleviivauksia.</p>
+			<p>Tekstiä voi koristella <i>text-decoration</i> -attribuutin avulla. Se saa arvokseen jonkun arvoista: none, underline, line-through tai overline.</p>
+			</p>HUOM! Tekstiä ei kannata turhaan alleviivata, sillä alleviivattu teksti tarkoittaa usein linkkiä!</p>
+			
+			<h2 class="red_text">Esimerkki:</h2>
+			<div class="esimerkki">
+				<p>.alleviivattu { text-decoration: underline; }</p>
+				<p>p { text-decoration: line-through; }</p>
+			</div>
+		</div>
+		
+		<div class="opetuspalkki">
+			<h3>Rivin korkeuden määrittäminen</h3>
+			
+			<p>CSS:n avulla voi muokata tekstin rivikorkeutta asettamalla <i>line-height</i> -attribuutille jonkun arvon.</p>
+			<p>Arvon asettaminen tapahtuu paljolti samalla tavalla, kuin sisennyksen asettaminenkin</p>
+			<p>HUOM! Rivikorkeuden kasvattaminen EI kasvata fonttikokoa, pelkästään rivin vaatimaa tilaa!</p>
+			
+			<h2 class="red_text">Esimerkki:</h2>
+			<div class="esimerkki">
+				<p>p { line-height: 25px; } </p>
+			</div>
+		</div>
+		
+		<div class="opetuspalkki">
+			<h3>Tekstin asemointi vaakatasossa</h3>
+			
+			<p>Tekstiä voidaan asemoida vaakasuunnassa muokkaamalla elementin <i>text-align</i> -attribuuttia.</p>
+			<p>Mahdollisia arvoja ovat: left, center, right ja justify</p>
+			<p>Left ja right tasaavat tekstin vasempaan tai oikeaan laitaan, center keskittää tekstin ja justify tasaa tekstin kumpaankin reunaan.</p>
+			
+			<h2 class="red_text">Esimerkki:</h2>
+			<div class="esimerkki">
+				<p>p { text-align: left; } </p>
+				<p>.tasattu { text-align: justify; } </p>
+			</div>
+		</div>
+		
+		<div id="testaa_itse" class="opetuspalkki">
+			<h3>Kokeile itse!</h3>
+			<p>Alla olevalla lomakkeella voit testata edellä opetettuja tekstin muokkaukseen liittyviä asioita. Valitsemalla eri arvoja, valikon alapuolella oleva lomake päivittyy automaattisesti.</p>
+			<form>
+				<fieldset class="kokeilu">
+					<!--Värin vaihtelun testaaminen-->
+					<label>color:</label>
+					
+					<input id="r-black" type="radio" name="color" value="black" checked="checked" />
+					<label for="r-black">black</label>
+					
+					<input type="radio" id="r-red" name="color" value="#FF0000" />
+					<label for="r-red">#FF0000</label>
+					
+					<input type="radio" id="r-green" name="color" value="rgb(0,255,0)" />
+					<label for="r-green">rgb(0,255,0)</label>
+				</fieldset>
+				
+				<fieldset class="kokeilu">
+					<!--Tekstin sisennyksen testaaminen-->
+					<label>text-indent:</label>
+					
+					<input id="r-indent-none" type="radio" name="text-indent" value="0" checked="checked" />
+					<label for="r-indent-none">0</label>
+					
+					<input type="radio" id="r-indent-50px" name="text-indent" value="50px" />
+					<label for="r-indent-50px">50px</label>
+					
+					<input type="radio" id="r-indent-2em" name="text-indent" value="2em" />
+					<label for="r-indent-2em">2em</label>
+					
+					<input type="radio" id="r-indent-30%" name="text-indent" value="20%" />
+					<label for="r-indent-30%">30%</label>
+					
+					<input type="radio" id="r-indent-4cm" name="text-indent" value="4cm" />
+					<label for="r-indent-4cm">4cm</label>
+					
+					<input type="radio" id="r-indent-15pt" name="text-indent" value="15pt" />
+					<label for="r-indent-15pt">15pt</label>
+				</fieldset>
+				
+				<fieldset class="kokeilu">
+					<!--Tekstikoristeiden testaaminen-->
+					<label>text-decoration:</label>
+					
+					<input id="r-td-none" type="radio" name="text-decoration" value="none" checked="checked" />
+					<label for="r-td-none">none</label>
+					
+					<input type="radio" id="r-td-underline" name="text-decoration" value="underline" />
+					<label for="r-td-underline">underline</label>
+					
+					<input type="radio" id="r-td-line-through" name="text-decoration" value="line-through" />
+					<label for="r-td-line-through">line-through</label>
+					
+					<input type="radio" id="r-td-overline" name="text-decoration" value="overline" />
+					<label for="r-td-overline">overline</label>
+				</fieldset>
+				
+				<fieldset class="kokeilu">
+					<!--Rivikorkeuden testaaminen-->
+					<label>line-height:</label>
+					
+					<input id="r-lh-normal" type="radio" name="line-height" value="normal" checked="checked" />
+					<label for="r-lh-normal">normal</label>
+					
+					<input id="r-lh-20px" type="radio" name="line-height" value="20px" />
+					<label for="r-lh-20px">20px</label>
+					
+					<input id="r-lh-3em" type="radio" name="line-height" value="3em" />
+					<label for="r-lh-3em">3em</label>
+					
+					<input id="r-lh-20%" type="radio" name="line-height" value="20%" />
+					<label for="r-lh-20%">20%</label>
+				</fieldset>
+				<fieldset class="kokeilu">
+					<!--Text-alignin testaaminen-->
+					<label>text-align:</label>
+					
+					<input id="r-ta-left" type="radio" name="text-align" value="left" checked="checked" />
+					<label for="r-ta-left">left</label>
+					
+					<input type="radio" id="r-ta-center" name="text-align" value="center" />
+					<label for="r-ta-center">center</label>
+					
+					<input type="radio" id="r-ta-right" name="text-align" value="right" />
+					<label for="r-ta-right">right</label>
+					
+					<input type="radio" id="r-ta-justify" name="text-align" value="justify" />
+					<label for="r-ta-justify">justify</label>
+				</fieldset>
+			</form>
+			
+			<div id="testi">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque, metus sit amet imperdiet varius, nibh leo consectetur nibh, semper egestas mauris mauris vitae orci. Donec adipiscing rhoncus enim, ut auctor nunc viverra ut. Aliquam fringilla nunc et nulla faucibus aliquet. Praesent orci lorem, egestas eget lacinia ullamcorper, dignissim quis mi. Duis volutpat, lacus nec luctus aliquam, lorem elit adipiscing enim, id auctor orci dolor a mauris. Nam imperdiet lectus sed magna egestas id laoreet nisi fringilla. Cras vulputate arcu sed erat dapibus ut egestas eros iaculis.
+				</p>
+				<p>
+					In at hendrerit libero. Proin pellentesque erat quis eros eleifend placerat sit amet vel arcu. Quisque erat mi, commodo et eleifend eget, laoreet sit amet diam. Mauris ut libero sed ligula aliquet pretium. Mauris aliquam gravida tellus, a imperdiet metus bibendum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse nec tortor eget odio imperdiet accumsan non at nisi.
+				</p>
+				<p>
+					Nunc pulvinar rutrum eros, eu porttitor urna convallis quis. Aliquam in tincidunt mauris. Fusce mauris eros, bibendum at feugiat sed, gravida in dolor. Morbi quis lorem eu nisl pharetra luctus. Donec molestie metus sed enim interdum id vestibulum quam vehicula. Nam pharetra venenatis diam eu lobortis. Cras aliquet mattis ligula et scelerisque. Aenean a semper eros. Integer ornare vehicula diam imperdiet vulputate. Mauris mauris quam, imperdiet quis hendrerit et, imperdiet a felis. Suspendisse vitae diam diam.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<footer>
+		<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fpeople.uta.fi%2F~es96426%2FJWT_harkkatyo%2Findex.html"><img src="img/I_heart_validator.png" alt="validaattori"></a>
+		<p>Copyright Eetu Suonpää, Suonpaa.Eetu.J@student.uta.fi</p>
+	</footer>
+</body>
+</html>

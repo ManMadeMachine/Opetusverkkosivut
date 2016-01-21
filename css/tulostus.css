@@ -1,0 +1,125 @@
+@import url("reset.css");
+
+body{
+	background-color: #F5F5F5;
+	font-family: Verdana;
+}
+a{
+	text-decoration: none;
+	font-weight: bold;
+}
+#logo{
+	background-color: #C7D0D5;
+	height: 150px;
+	border-bottom: 1px dotted #93B1C6;
+}
+#logo h1, h2{
+	color: #4D4D4D;
+	padding: 20px;
+	margin:0;
+}
+
+#logo h1.red_text{
+	color: #FF7148;
+}
+
+#navbar{
+	display:none;
+}
+#navbar li{
+	min-width: 90px;
+	width:31%;
+	height: 40px;
+	font-height: 20px;
+	padding-top: 10px;
+	margin-left: 1%;
+	margin-right: 1%;
+	float:left;
+	text-align: center;
+	background-color: #93B1C6;
+	border-radius: 4px;
+}
+#navbar li:hover{
+	background-color: #FF7148;
+	color:white;
+	cursor: pointer;
+}
+#navbar .active{
+	/*TODO*/
+}
+#main_content{
+	width: 80%;
+	margin: 20px auto;
+}
+
+.opetuspalkki h3{
+	width:98%;
+	margin-top: 10px;
+	background-color: #93B1C6;
+	padding:10px
+}
+
+.opetuspalkki p{
+	margin-bottom: 20px;
+	padding-left: 10px;
+}
+
+.opetuspalkki ul{
+	margin-left: 50px;
+	margin-bottom: 20px;
+	list-style-type: circle;
+}
+.opetuspalkki h2.red_text{
+	color: #FF7148;
+}
+.kokeilu{
+	display:none
+}
+
+.esimerkki{
+	border: 1px solid blue;
+	width:75%;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+#testaa_itse{
+	display:none;
+}
+
+#testi{
+	display:none;
+}
+
+#yhteydenotto_form{
+	width: 50%;
+	margin-top: 30px;
+}
+#yhteydenotto_form label{
+	width:100%;
+	height:20px;
+	float:left;
+}
+#yhteydenotto_form label.error{
+	color:red;
+}
+#yhteydenotto_form input{
+	width:100%;
+	height: 25px;
+	float:left;
+	margin-bottom: 10px;
+}
+#yhteydenotto_form textarea{
+	width:100%;
+	height: 200px;
+	resize:none;
+}
+
+#yhteydenotto_form button{
+	width: 70px;
+	height: 30px;
+	margin-top: 20px;
+}
+
+footer{
+	display:none;
+}
